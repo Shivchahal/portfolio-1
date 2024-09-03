@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/21171ae8bf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Shivani Chahal</span><br> From India.</h1>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <img src="Shivani.jpg">
+                </div>
+                <div class="col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolor, nisi molestias iure distinctio minima aperiam delectus perferendis. Beatae unde dolorum error cupiditate laborum soluta aspernatur. Voluptate consectetur obcaecati molestias! Neque soluta aliquam a quod blanditiis cumque ab similique facere totam ipsum illo debitis rem placeat, nesciunt voluptatibus ratione incidunt reiciendis nostrum velit voluptate inventore sunt quas quia at. Quasi. Unde, quae? Sunt iusto omnis nisi ipsa praesentium eveniet dolores soluta placeat assumenda velit impedit illo, maxime quod minima qui sit quo doloremque temporibus ex nostrum numquam laboriosam quos laborum. eque officia aut natus et dolores saepe voluptas delectus. Consecte</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Web-Developer</span><br>Designing Web-sites and Web-pages</li>
+                            <li><span>Git/GitHUB</span></li>
+                            <li><span>NodeJs</span><br>Backend using Nodejs</li>
+                            <li><span>SQL</span><br>Database and DBMS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2023</span><br>Youth Influencer at UnSchool</li>
+                            <li><span>2024</span><br>Web-Developer Intern at CodSoft</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>12th , CGPA:9.4</span><br>Aarohi Model Sr.Sec. School</li>
+                            <li><span>10 , CGPA:9.0</span><br>AMSSS</li>
+                            <li><span>Btech. CGPA: 8.0</span><br>Kurukshetra University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="conatiner">
+            <h1 class="subtitle">My Services</h1>
+        
+        <div class="service-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                   <h2>Web Developer</h2>
+        <p>Web developer , can make websites of any kind.
+        </p>
+        <a href="#">Learn More</a>
+            </div>
+        
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Youth Influencerr</h2>
+                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt vero optio aspernatur similique aperiam ipsum voluptatem necessitatibus, eos asperiores non repellendus dolores quia modi, beatae nulla adipisci nobis? Vel, quibusdam?
+                 Voluptatem blanditiis nulla dolorem molestias saepe dolores maxime similique ad impedit atque, tempore dolor eius, enim neque quis harum ipsum asperiores aliquid veritatis laborum quibusdam fugit consectetur nam! Error, eveniet.</p>
+        <a href="#">Learn More</a>
+         </div>
+        
+         <div><i class="fa-brands fa-algolia"></i>
+            <h2>Problem-Solver</h2>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt vero optio aspernatur similique aperiam ipsum voluptatem necessitatibus, eos asperiores non repellendus dolores quia modi, beatae nulla adipisci nobis? Vel, quibusdam?
+             Voluptatem blanditiis nulla dolorem molestias saepe dolores maxime similique ad impedit atque, tempore dolor eius, enim neque quis harum ipsum asperiores aliquid veritatis laborum quibusdam fugit consectetur nam! Error, eveniet.</p>
+        <a href="#">Learn More</a>
+        </div>
+        
+        
+        </div>
+        </div>
+        
+        
+        
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            // Remove 'active-link' class from all tab links
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            
+            // Remove 'active-tab' class from all tab contents
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            
+            // Add 'active-link' class to the clicked tab link
+            document.querySelector(`.tab-links[onclick="opentab('${tabname}')"]`).classList.add("active-link");
+            
+            // Add 'active-tab' class to the clicked tab content
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        
+       
+    </script>
+</body>
+</html>
